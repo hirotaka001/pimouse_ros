@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#encoding utf8
+#encoding: utf8
 import unittest, rostest
 import rosnode, rospy
 import time
@@ -8,7 +8,7 @@ from geometry_msgs.msg import Twist
 
 class MotorTest(unittest.TestCase):
     def file_check(self, dev, value, message):
-        with open("/dev" + dev, "r") as f:
+        with open("/dev/" + dev, "r") as f:
             self.assertEqual(f.readline(), str(value)+"\n", message)
 
     def test_node_exist(self):
