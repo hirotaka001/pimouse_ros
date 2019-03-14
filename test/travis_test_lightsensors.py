@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#encoding: utf8
+# coding: utf-8
 import unittest, rostest
 import rosnode, rospy
 import time

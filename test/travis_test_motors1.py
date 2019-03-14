@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#encoding: utf8
+# coding: utf-8
 import unittest, rostest
 import rosnode, rospy
 import time
@@ -30,7 +30,7 @@ class MotorTest(unittest.TestCase):
     def test_put_cmd_vel(self):     #cmd_velのテスト
         pub = rospy.Publisher('/cmd_vel', Twist)
         m = Twist()
-        m.liner.x = 0.1414      #この速度、角速度で左が200[Hz]、右が600[Hz]になる
+        m.linear.x = 0.1414      #この速度、角速度で左が200[Hz]、右が600[Hz]になる
         m.angular.z = 1.57
         for i in range(10):
             pub.publish(m)
